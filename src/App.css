@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilização da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 5px;
+}
+
+/* Suavização de rolagem */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajustes para o Slider */
+.music-slider .swiper-pagination-bullet {
+  background: #D4AF37 !important;
+}
+
+.music-slider .swiper-button-next,
+.music-slider .swiper-button-prev {
+  color: #D4AF37 !important;
+}

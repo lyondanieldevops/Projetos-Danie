@@ -2,14 +2,13 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}", // Isso diz ao Tailwind para ler TUDO dentro de src
   ],
   theme: {
     extend: {
-      fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-      },
+      colors: {
+        'musica-orange': '#ff8c00', // Cor inspirada na Colorindo Sons
+      }
     },
   },
   plugins: [],

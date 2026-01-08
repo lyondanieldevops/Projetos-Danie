@@ -6,48 +6,29 @@ const Navbar = () => {
       position: 'fixed', 
       top: 0, 
       width: '100%', 
-      height: '80px', 
+      height: '80px', // Aumentei para 80px para as letras maiores respirarem bem
       background: 'white', 
       display: 'flex', 
       alignItems: 'center', 
-      justifyContent: 'space-between', 
-      padding: '0 50px', 
+      justifyContent: 'space-around', 
       boxShadow: '0 2px 5px rgba(0,0,0,0.1)', 
       zIndex: 1000
     }}>
-      
-      {/* LADO ESQUERDO: Ícone Instagram + Nome */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-        <a 
-          href="https://www.instagram.com/lyon_daniel_silvestre_da_cunha" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ display: 'flex', alignItems: 'center' }}
-        >
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
-            alt="Instagram" 
-            style={{ width: '28px', height: '28px' }} 
-          />
-        </a>
-        
-        <div style={{
-          fontWeight: '800', 
-          color: '#e65100', 
-          fontSize: '22px', 
-          letterSpacing: '1px'
-        }}>
-          PROF. DANIEL LYON
-        </div>
+      {/* Nome do Professor - Aumentado para 22px e negrito extra */}
+      <div style={{
+        fontWeight: '800', 
+        color: '#e65100', 
+        fontSize: '22px', 
+        letterSpacing: '1px'
+      }}>
+        PROF. DANIEL LYON
       </div>
 
-      {/* LADO DIREITO: Links do Menu */}
+      {/* Links do Menu - Espaçamento aumentado para 50px e fonte para 18px */}
       <ul style={{
         display: 'flex', 
         listStyle: 'none', 
-        gap: '50px',
-        margin: 0,
-        padding: 0
+        gap: '50px' // Afasta INÍCIO, SOBRE e CURSOS para não ficarem colados
       }}>
         <li>
           <a href="#inicio" style={{

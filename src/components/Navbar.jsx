@@ -10,8 +10,8 @@ const Navbar = () => {
       background: 'white', 
       display: 'flex', 
       alignItems: 'center', 
-      justifyContent: 'space-between', // Mudamos para separar os lados
-      padding: '0 50px', // Adiciona margem nas laterais
+      justifyContent: 'space-between', 
+      padding: '0 50px', 
       boxShadow: '0 2px 5px rgba(0,0,0,0.1)', 
       zIndex: 1000
     }}>

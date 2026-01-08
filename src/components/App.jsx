@@ -1,62 +1,83 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import ImageSlider from './ImageSlider';
-import PaginaCurso from './PaginaCurso';
-import WhatsAppButton from './WhatsAppButton';
-import ScrollToTop from './ScrollToTop';
 import './App.css';
+import Navbar from './Navbar';
+import WhatsAppButton from './WhatsAppButton';
 
 import imgViolao from '../assets/violao.png';
 import imgPiano from '../assets/piano.png';
 import imgBateria from '../assets/bateria.png';
 import imgTeclado from '../assets/teclado.png';
+import videoBanner from '../assets/video-banner.mp4';
+import imgSobre from '../assets/sobre.mim.png'; 
 
-const cursos = [
-  { id: 'violao', nome: 'Violão', imagem: imgViolao, descricao: 'Aulas personalizadas de violão popular e erudito.' },
-  { id: 'piano', nome: 'Piano', imagem: imgPiano, descricao: 'Aprenda piano do zero com metodologia prática.' },
-  { id: 'bateria', nome: 'Bateria', imagem: imgBateria, descricao: 'Ritmo e técnica para dominar as baquetas.' },
-  { id: 'teclado', nome: 'Teclado', imagem: imgTeclado, descricao: 'Teoria e prática aplicada ao teclado musical.' }
-];
+function App() {
+  const zapLink = "https://wa.me/5561992984080";
 
-function Home() {
   return (
-    <div className="pt-16">
-      <ImageSlider />
-      <section id="cursos" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nossos Cursos</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {cursos.map((curso) => (
-              <div key={curso.id} className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                <img src={curso.imagem} alt={curso.nome} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2">{curso.nome}</h3>
-                  <p className="text-gray-600 mb-4">{curso.descricao}</p>
-                  <a href={`#/curso/${curso.id}`} className="block text-center bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                    Saiba Mais
-                  </a>
-                </div>
-              </div>
-            ))}
+    <div className="App">
+      <Navbar />
+      
+      <header id="inicio" className="hero">
+        <video autoPlay loop muted playsInline className="video-bg">
+          <source src={videoBanner} type="video/mp4" />
+        </video>
+        <div className="hero-text-box">
+          <h1>PROF. DANIEL LYON</h1>
+          <p>Escola de Música</p>
+          <button className="btn-banner" onClick={() => window.open(zapLink, '_blank')}>
+            Clique aqui e agende agora sua aula!
+          </button>
+        </div>
+      </header>
+
+      <section id="sobre" className="sobre-section">
+        <div className="sobre-container">
+          {/* Título no topo da seção */}
+          <h2 className="sobre-titulo-topo">Sobre o Professor</h2>
+          
+          <div className="sobre-flex">
+            <img src={imgSobre} alt="Professor" className="img-sobre" />
+            <div className="sobre-content">
+              <p>
+                Aulas presenciais em Brasília e online para todo o Brasil. 
+                Foco no aprendizado prático e resultados reais.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-    </div>
-  );
-}
 
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/curso/:id" element={<PaginaCurso />} />
-      </Routes>
-      <Footer />
+      <section id="cursos" className="cursos-container">
+        <h2>Nossos Cursos</h2>
+        <div className="cursos-grid">
+          <div className="curso-card">
+            <img src={imgViolao} alt="Violão" />
+            <h3>Violão</h3>
+            <button onClick={() => window.open(zapLink, '_blank')} className="btn-laranja">Saiba Mais</button>
+          </div>
+          <div className="curso-card">
+            <img src={imgPiano} alt="Piano" />
+            <h3>Piano</h3>
+            <button onClick={() => window.open(zapLink, '_blank')} className="btn-laranja">Saiba Mais</button>
+          </div>
+          <div className="curso-card">
+            <img src={imgBateria} alt="Bateria" />
+            <h3>Bateria</h3>
+            <button onClick={() => window.open(zapLink, '_blank')} className="btn-laranja">Saiba Mais</button>
+          </div>
+          <div className="curso-card">
+            <img src={imgTeclado} alt="Teclado" />
+            <h3>Teclado</h3>
+            <button onClick={() => window.open(zapLink, '_blank')} className="btn-laranja">Saiba Mais</button>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <p><strong>PROF. DANIEL LYON - ESCOLA DE MÚSICA</strong></p>
+        <p>Brasília - DF | @prof.daniellyon</p>
+      </footer>
+
       <WhatsAppButton />
     </div>
   );

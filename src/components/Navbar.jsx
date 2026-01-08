@@ -2,20 +2,65 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="font-bold text-xl text-gray-800">
-          <a href="#/">PROF. DANIEL LYON</a>
-        </div>
-        <div className="hidden md:flex space-x-8 text-gray-600 font-medium">
-          <a href="#/" className="hover:text-orange-600">INÍCIO</a>
-          <a href="#/sobre" className="hover:text-orange-600">SOBRE</a>
-          <a href="#/cursos" className="hover:text-orange-600">CURSOS</a>
-        </div>
-        <div className="md:hidden text-gray-600">
-          {/* Menu Mobile aqui se desejar futuramente */}
-        </div>
+    <nav style={{
+      position: 'fixed', 
+      top: 0, 
+      width: '100%', 
+      height: '80px', // Aumentei para 80px para as letras maiores respirarem bem
+      background: 'white', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'space-around', 
+      boxShadow: '0 2px 5px rgba(0,0,0,0.1)', 
+      zIndex: 1000
+    }}>
+      {/* Nome do Professor - Aumentado para 22px e negrito extra */}
+      <div style={{
+        fontWeight: '800', 
+        color: '#e65100', 
+        fontSize: '22px', 
+        letterSpacing: '1px'
+      }}>
+        PROF. DANIEL LYON
       </div>
+
+      {/* Links do Menu - Espaçamento aumentado para 50px e fonte para 18px */}
+      <ul style={{
+        display: 'flex', 
+        listStyle: 'none', 
+        gap: '50px' // Afasta INÍCIO, SOBRE e CURSOS para não ficarem colados
+      }}>
+        <li>
+          <a href="#inicio" style={{
+            textDecoration: 'none', 
+            color: '#333', 
+            fontWeight: 'bold', 
+            fontSize: '18px'
+          }}>
+            INÍCIO
+          </a>
+        </li>
+        <li>
+          <a href="#sobre" style={{
+            textDecoration: 'none', 
+            color: '#333', 
+            fontWeight: 'bold', 
+            fontSize: '18px'
+          }}>
+            SOBRE
+          </a>
+        </li>
+        <li>
+          <a href="#cursos" style={{
+            textDecoration: 'none', 
+            color: '#333', 
+            fontWeight: 'bold', 
+            fontSize: '18px'
+          }}>
+            CURSOS
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 };

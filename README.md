@@ -1,16 +1,14 @@
-# React + Vite
+# PROF. DANIEL LYON - ESCOLA DE MÚSICA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o projeto oficial da Escola de Música Online do Prof. Daniel Lyon. Desenvolvido com React e Vite para garantir alta performance e carregamento rápido das aulas.
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
+- **Cursos**: Violão, Piano, Bateria e Teclado.
+- **Tecnologias**: React, Vite, React Router Dom (HashRouter), FontAwesome.
+- **Funcionalidades**: Botão flutuante de WhatsApp, Scroll automático para o topo e Banner em vídeo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Comandos de Desenvolvimento
+Para rodar o projeto localmente:
+```bash
+npm install
+npm run dev

@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 85px; /* Ajustado para a nova altura da Navbar */
 }
 
 .video-bg {
@@ -29,7 +29,6 @@
   transform: translate(-50%, -50%);
   z-index: -1;
   filter: brightness(0.6);
-  object-position: center 80%;
 }
 
 .hero-text-box {
@@ -38,9 +37,8 @@
 }
 
 .hero-text-box h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .btn-banner {
@@ -53,16 +51,10 @@
   font-size: 1.1rem;
   cursor: pointer;
   margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: 0.3s;
 }
 
-.btn-banner:hover {
-  background: #e67e00;
-  transform: scale(1.05);
-}
-
-/* CORREÇÃO DA SEÇÃO SOBRE */
+/* SEÇÃO SOBRE CORRIGIDA */
 .sobre-section {
   padding: 80px 20px;
   background: #fff;
@@ -83,7 +75,7 @@
 .sobre-flex {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -100,11 +92,12 @@
 }
 
 .sobre-content p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #444;
 }
 
+/* CURSOS */
 .cursos-container {
   padding: 80px 20px;
   background: #f9f9f9;

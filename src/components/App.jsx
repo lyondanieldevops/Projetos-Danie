@@ -32,7 +32,6 @@ function App() {
 
       <section id="sobre" className="sobre-section">
         <div className="sobre-container">
-          {/* Título no topo da seção */}
           <h2 className="sobre-titulo-topo">Sobre o Professor</h2>
           
           <div className="sobre-flex">

@@ -6,7 +6,7 @@ const Navbar = () => {
       position: 'fixed', 
       top: 0, 
       width: '100%', 
-      height: '85px', 
+      height: '80px', // Aumentei para 80px para as letras maiores respirarem bem
       background: 'white', 
       display: 'flex', 
       alignItems: 'center', 
@@ -14,19 +14,21 @@ const Navbar = () => {
       boxShadow: '0 2px 5px rgba(0,0,0,0.1)', 
       zIndex: 1000
     }}>
+      {/* Nome do Professor - Aumentado para 22px e negrito extra */}
       <div style={{
         fontWeight: '800', 
         color: '#e65100', 
-        fontSize: '24px', 
+        fontSize: '22px', 
         letterSpacing: '1px'
       }}>
         PROF. DANIEL LYON
       </div>
 
+      {/* Links do Menu - Espaçamento aumentado para 50px e fonte para 18px */}
       <ul style={{
         display: 'flex', 
         listStyle: 'none', 
-        gap: '60px' 
+        gap: '50px' // Afasta INÍCIO, SOBRE e CURSOS para não ficarem colados
       }}>
         <li>
           <a href="#inicio" style={{

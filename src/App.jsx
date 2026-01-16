@@ -1,41 +1,32 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import SobreMim from './components/SobreMim';
 import PaginaCurso from './components/PaginaCurso';
-import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
+
+// Verifique se estes arquivos existem na sua pasta components antes de tirar o comentário //
+// import Banner from './components/Banner';
+// import SobreMim from './components/SobreMim';
+// import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App" style={{ scrollBehavior: 'smooth' }}>
-      {/* Menu Superior */}
       <Navbar />
-      
-      {/* Botão Flutuante do WhatsApp */}
       <WhatsAppButton />
-      
-      {/* Volta ao topo ao navegar */}
       <ScrollToTop />
 
-      {/* Seção Principal com Vídeo */}
-      <section id="inicio">
-        <Banner />
-      </section>
-
-      {/* Seção Biografia */}
-      <section id="sobre">
-        <SobreMim />
-      </section>
-
-      {/* Seção dos Instrumentos com 50 min */}
-      <section id="cursos">
+      <main>
+        {/* O Banner e SobreMim ficam comentados para evitar a tela branca se o arquivo sumiu */}
+        {/* <Banner /> */}
+        {/* <SobreMim /> */}
+        
         <PaginaCurso />
-      </section>
+      </main>
 
-      {/* Rodapé Final */}
-      <Footer />
+      <footer style={{ background: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <p>© 2026 Prof. Daniel Lyon</p>
+      </footer>
     </div>
   );
 }

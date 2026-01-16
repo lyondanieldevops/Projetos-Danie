@@ -1,37 +1,27 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import SobreMim from './components/SobreMim';
 import PaginaCurso from './components/PaginaCurso';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
-import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App" style={{ scrollBehavior: 'smooth' }}>
-      {/* Componentes de utilidade e navegação */}
       <Navbar />
-      <WhatsAppButton />
-      <ScrollToTop />
-
-      {/* Conteúdo Principal do Site */}
+      
       <main>
-        <section id="inicio">
-          <Banner />
-        </section>
-
-        <section id="sobre">
-          <SobreMim />
-        </section>
+        {/* Deixei apenas o que existe na sua pasta para o erro parar */}
+        <div id="inicio" style={{ padding: '50px 0', textAlign: 'center', background: '#eee' }}>
+          <h1>Escola de Música Prof. Daniel Lyon</h1>
+          <p>Aulas personalizadas de música em Brasília</p>
+        </div>
 
         <section id="cursos">
           <PaginaCurso />
         </section>
       </main>
 
-      {/* Rodapé original */}
-      <Footer />
+      <footer style={{ background: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <p>© 2026 Prof. Daniel Lyon</p>
+      </footer>
     </div>
   );
 }

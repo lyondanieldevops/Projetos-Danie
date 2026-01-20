@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import ImageSlider from './components/ImageSlider'
 import { X, PlayCircle, MessageCircle, ShoppingBag } from 'lucide-react'
 
-// Suas imagens (conforme os nomes na sua pasta assets)
+// Suas imagens (Ajustadas conforme a sua pasta assets para a Vercel funcionar)
 import fotoSobreMim from './assets/sobre.jpeg'
 import fotoPiano from './assets/piano.jpeg'
 import fotoBateria from './assets/bateria.png' 
@@ -16,13 +16,13 @@ function App() {
   const whatsappBase = "https://wa.me/5561981976241?text=";
   const instagramUrl = "https://www.instagram.com/daniel.lesson_?igsh=dGEyZmRkcmNlZzQ=";
 
-  // Adicionada a Guitarra aqui na lista
+  // Lista de instrumentos sincronizada
   const instrumentos = [
     { nome: 'Bateria', foto: fotoBateria },
     { nome: 'Piano', foto: fotoPiano },
     { nome: 'Teclado', foto: fotoTeclado },
     { nome: 'Violão', foto: fotoViolao },
-    { nome: 'Guitarra', foto: fotoViolao } // Usando a foto de violão para guitarra enquanto você não sobe uma nova
+    { nome: 'Guitarra', foto: fotoViolao } // Usando foto de violão temporariamente
   ];
 
   return (
@@ -52,7 +52,7 @@ function App() {
         </div>
       </section>
 
-      {/* INSTRUMENTOS (Agora com Guitarra) */}
+      {/* INSTRUMENTOS */}
       <section id="instrumentos" className="py-40 bg-black border-b border-[#D4AF37]/10">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-[#D4AF37] font-serif text-4xl mb-20 tracking-widest uppercase font-bold">Aulas Disponíveis</h2>
@@ -70,7 +70,7 @@ function App() {
         </div>
       </section>
 
-      {/* SEÇÃO LOJA (Restaurada) */}
+      {/* SEÇÃO LOJA */}
       <section id="loja" className="py-40 bg-[#050505] border-b border-[#D4AF37]/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ShoppingBag className="text-[#D4AF37] mx-auto mb-6" size={48} />

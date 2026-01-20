@@ -4,12 +4,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// Ajustado para minúsculo para bater com os arquivos da sua pasta assets
+// Ajustado para bater com os arquivos da sua pasta assets
 import fotoPiano from '../assets/piano.jpeg';
 import fotoBateria from '../assets/bateria.png'; 
 import fotoViolao from '../assets/violao.jpeg';
 import fotoTeclado from '../assets/teclado.jpeg';
-import fotoSobre from '../assets/sobre.jpeg';
+import fotoSobre from '../assets/sobre.png'; // CORRIGIDO: de .jpeg para .png
 
 const images = [fotoPiano, fotoBateria, fotoViolao, fotoTeclado, fotoSobre];
 

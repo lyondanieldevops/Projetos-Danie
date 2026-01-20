@@ -4,8 +4,8 @@ import Navbar from './components/Navbar'
 import ImageSlider from './components/ImageSlider'
 import { X, PlayCircle, MessageCircle, ShoppingBag } from 'lucide-react'
 
-// Suas imagens (Caminhos ajustados para minúsculo para compatibilidade com Vercel)
-import fotoSobreMim from './assets/sobre.jpeg'
+// Suas imagens sincronizadas com a pasta assets
+import fotoSobreMim from './assets/sobre.png' 
 import fotoPiano from './assets/piano.jpeg'
 import fotoBateria from './assets/bateria.png' 
 import fotoViolao from './assets/violao.jpeg'
@@ -22,7 +22,7 @@ function App() {
     { nome: 'Piano', foto: fotoPiano },
     { nome: 'Teclado', foto: fotoTeclado },
     { nome: 'Violão', foto: fotoViolao },
-    { nome: 'Guitarra', foto: fotoViolao } // Usando foto de violão temporariamente
+    { nome: 'Guitarra', foto: fotoViolao } 
   ];
 
   return (
@@ -38,16 +38,24 @@ function App() {
         </a>
       </main>
 
-      {/* SOBRE */}
+      {/* SOBRE - Usando a nova foto sobre.png */}
       <section id="sobre" className="py-40 bg-black border-b border-[#D4AF37]/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
-          <div className="w-72 h-[450px] border border-[#D4AF37]/30 p-3 relative bg-[#0a0a0a]">
-             <img src={fotoSobreMim} className="w-full h-full object-cover" alt="Daniel Lesson" />
+          <div className="w-full md:w-1/2 border border-[#D4AF37]/30 p-3 relative bg-[#0a0a0a]">
+             <img src={fotoSobreMim} className="w-full h-auto object-cover rounded-sm" alt="Daniel Lesson - Professor" />
              <div className="absolute -bottom-6 -right-6 bg-[#D4AF37] text-black text-[10px] font-bold py-4 px-6 uppercase tracking-widest shadow-xl">Pedagogo & Músico</div>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-[#D4AF37] font-serif text-4xl md:text-5xl uppercase tracking-widest mb-10">Daniel Lesson</h2>
-            <p className="text-gray-300 text-lg italic leading-relaxed">"Transformando a casa do aluno em um ambiente de alta performance musical."</p>
+            <div className="space-y-6">
+              <p className="text-gray-300 text-lg italic leading-relaxed">
+                "Transformando a casa do aluno em um ambiente de alta performance musical."
+              </p>
+              <p className="text-gray-400 text-base leading-relaxed">
+                Com uma metodologia focada no desenvolvimento individual, levo o ensino de música 
+                de forma personalizada, unindo técnica acadêmica e sensibilidade artística.
+              </p>
+            </div>
           </div>
         </div>
       </section>

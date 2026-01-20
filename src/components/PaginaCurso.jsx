@@ -1,8 +1,9 @@
 import React from 'react';
-import imgViolao from '../assets/violao.png';
-import imgPiano from '../assets/piano.png';
+// Ajustado para minúsculo e extensões corretas (.jpeg para a maioria e .png para bateria)
+import imgViolao from '../assets/violao.jpeg';
+import imgPiano from '../assets/piano.jpeg';
 import imgBateria from '../assets/bateria.png';
-import imgTeclado from '../assets/teclado.png';
+import imgTeclado from '../assets/teclado.jpeg';
 
 const PaginaCurso = () => {
   const zapLink = "https://wa.me/5561992984080";
@@ -21,7 +22,7 @@ const PaginaCurso = () => {
         {cursos.map((curso, index) => (
           <div key={index} style={{ background: '#fff', padding: '20px', borderRadius: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
             <img src={curso.img} alt={curso.nome} style={{ width: '100%', borderRadius: '10px' }} />
-            <h3>{curso.nome}</h3>
+            <h3 style={{ color: '#333' }}>{curso.nome}</h3>
             <p style={{ fontSize: '14px', color: '#555', margin: '15px 0' }}>{curso.desc}</p>
             <button onClick={() => window.open(zapLink, '_blank')} style={{ background: '#e65100', color: '#fff', border: 'none', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer' }}>
               Falar no WhatsApp

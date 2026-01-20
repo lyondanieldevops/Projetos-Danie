@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import ImageSlider from './components/ImageSlider'
 import { X, PlayCircle, MessageCircle, ShoppingBag } from 'lucide-react'
 
-// Suas imagens (Ajustadas conforme a sua pasta assets para a Vercel funcionar)
+// Suas imagens (Caminhos ajustados para minúsculo para compatibilidade com Vercel)
 import fotoSobreMim from './assets/sobre.jpeg'
 import fotoPiano from './assets/piano.jpeg'
 import fotoBateria from './assets/bateria.png' 

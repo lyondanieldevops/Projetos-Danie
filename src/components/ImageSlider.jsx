@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+// Ajustado para minúsculo para bater com os arquivos da sua pasta assets
 import fotoPiano from '../assets/piano.jpeg';
 import fotoBateria from '../assets/bateria.png'; 
 import fotoViolao from '../assets/violao.jpeg';
